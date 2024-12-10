@@ -1,17 +1,10 @@
-import os
-import instaloader
+from utils.download_reel import download_reel
 
-def download_reel(reel_url):
-    loader = instaloader.Instaloader(dirname_pattern="downloads", filename_pattern="{shortcode}")
+if __name__ == "__main__":
+    reel_url = input("Enter the Instagram reel URL: ")
     try:
-        loader.download_post(instaloader.Post.from_shortcode(loader.context, reel_url.split("/")[-2]), target="downloads")
-        print("Reel downloaded successfully.")
+        video_path = download_reel(reel_url)
+        print(f"Downloaded Video successfully: {video_path}")
     except Exception as e:
-        print(f"Error downloading reel: {e}")
-        # List the downloads folder to check for the file
-        files = os.listdir("downloads")
-        print("Downloaded files:", files)
-
-# Get the reel URL
-reel_url = input("Enter the Instagram reel URL: ")
-download_reel(reel_url)
+        print(f"Failed to download video: {e}")
+        
