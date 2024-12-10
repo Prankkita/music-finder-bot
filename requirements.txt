@@ -1,5 +1,5 @@
-python-telegram-bot==20.3
-instaloader==4.10.1
-ffmpeg-python==0.2.0
-requests==2.31.0
-pydub==0.25.1
+python-telegram-bot
+instaloader
+ffmpeg-python
+requests
+pydub

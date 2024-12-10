@@ -18,13 +18,13 @@ ACCESS_SECRET = "EjychtsUsyfOs5amW5xLs5NGiPc8L3T5KtzBTF8w"
 
 async def start(update: Update, _: CallbackContext) -> None:
     """Send a welcome message when the user starts the bot."""
-    await update.message.reply_text('Hello! Send me a reel link, and I will recognize the song for you.')
+    await update.message.reply_text('Hello! Send me a reel link, I will recognize the song and download the reel for you.')
 
 async def handle_reel_link(update: Update, _: CallbackContext) -> None:
     """Handle the reel link and process the song recognition."""
     reel_link = update.message.text
     user = update.message.from_user
-    await update.message.reply_text(f'Hi {user.first_name}, downloading the reel...')
+    await update.message.reply_text(f'Hi {user.first_name}, sending the reel and song...')
 
     try:
         # Download the reel

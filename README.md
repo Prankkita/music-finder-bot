@@ -1,4 +1,3 @@
-Here’s a sample `README.md` for your **Music Finder Bot** project:
 
 ---
 
